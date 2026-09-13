@@ -1,5 +1,5 @@
-# Gitlearning
+ # Gitlearning
 This repositry is use for learning purpose
-<bd>
+<br>
 This is for practice purpose
 bd means next line
