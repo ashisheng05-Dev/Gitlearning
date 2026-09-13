@@ -1,2 +1,4 @@
 # Gitlearning
-This repositry use for learning purpose
+This repositry is use for learning purpose
+<db>
+This is for practice purpose
