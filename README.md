@@ -1,5 +1,5 @@
  # Gitlearning
-This repositry is use for learning purpose
+This repositry is use for learning purpose.
 <br>
-This is for practice purpose
-bd means next line
+This is for practice purpose.
+br means next line
