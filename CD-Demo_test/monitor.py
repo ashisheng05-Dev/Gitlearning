@@ -5,9 +5,11 @@ import json
 from datetime import datetime
 
 url = os.getenv("SITE_URL")
+if not url:
+    raise SystemExit("SITE_URL must be set to the deployed site URL")
 
 start = time.time()
-response = requests.get(url)
+response = requests.get(url, timeout=30)
 latency = (time.time() - start) * 1000  # ms
 
 metrics = {
@@ -22,3 +24,6 @@ print(json.dumps(metrics, indent=2))
 
 with open("metrics.json", "w") as f:
     json.dump(metrics, f, indent=2)
+
+if not 200 <= response.status_code < 300:
+    raise SystemExit(f"Site health check failed with HTTP {response.status_code}")

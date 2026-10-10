@@ -83,10 +83,12 @@ jobs:
         run: python monitor.py
 
       - name: Upload monitoring metrics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: site-metrics
           path: metrics.json
+          if-no-files-found: ignore
 
   loadtest:
     needs: deploy
